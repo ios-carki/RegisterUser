@@ -27,11 +27,12 @@ struct User: Codable {
 
 class APIServiceModel {
     
-    func signup(name: String, email: String, password: String) {
+    func signup(name: String, email: String, password: String, completionHandler: @escaping (Int) -> Void) {
         let api = SeSACAPI.signup(userName: name, email: email, password: password)
         
         AF.request(api.url, method: .post, parameters: api.parameters, headers: api.headers).responseString { response in
             
+            completionHandler(response.response?.statusCode ?? 0)
             print(response)
             print(response.response?.statusCode)
             

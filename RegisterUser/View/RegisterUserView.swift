@@ -40,7 +40,7 @@ class RegisterUserView: BaseView {
     
     let submitButton: UIButton = {
         let view = UIButton()
-        view.setTitle("등록하기", for: .normal)
+        view.setTitle("중복검사", for: .normal)
         view.setTitleColor(.black, for: .normal)
         view.layer.borderColor = UIColor.black.cgColor
         view.layer.borderWidth = 1

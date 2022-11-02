@@ -16,22 +16,26 @@ final class LoginViewController: UIViewController {
     
     override func loadView() {
         view = mainView
-        view.backgroundColor = .white
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        backGroundSetting()
         naviSetting()
         displayUserData()
+    }
+    
+    func backGroundSetting() {
+        view.backgroundColor = UIColor(red: 109/255, green: 218/255, blue: 242/255, alpha: 1.0)
     }
     
     func displayUserData() {
         print("프로파일 메서드 실행")
         modelView.profile { userPhotoURL, userEmail, userName in
             
-            self.mainView.nickNameLable.text = userName
-            self.mainView.idLable.text = userEmail
+            self.mainView.nickNameLable.text = "  " + userName
+            self.mainView.idLable.text = "  " + userEmail
             self.mainView.profileImage.kf.setImage(with: URL(string: userPhotoURL)!)
         }
         

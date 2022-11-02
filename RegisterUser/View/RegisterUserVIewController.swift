@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Toast
+
 final class RegisterUserVIewController: UIViewController {
     
     let mainView = RegisterUserView()
@@ -35,19 +37,39 @@ final class RegisterUserVIewController: UIViewController {
         mainView.submitButton.addTarget(self, action: #selector(submitButtonClicked), for: .touchUpInside)
     }
     
+    func checkLoginButtonCondition(condition: Bool) {
+        
+        if condition {
+            self.mainView.signUpButton.isEnabled = true
+            self.mainView.signUpButton.backgroundColor = .white
+            self.mainView.signUpButton.setTitleColor(.black, for: .normal)
+        } else {
+            self.mainView.signUpButton.isEnabled = false
+            self.mainView.signUpButton.backgroundColor = .gray
+            self.mainView.signUpButton.setTitleColor(.lightGray, for: .normal)
+        }
+        
+    }
+    
     @objc func submitButtonClicked() {
         guard let userID = mainView.nameTextField.text else { return }
         guard let userEmail = mainView.idTextField.text else { return }
         guard let userPW = mainView.passwordTextField.text else { return }
         let vc = LoginViewController()
         
-        modelView.signup(name: userID, email: userEmail, password: userPW)
+        modelView.signup(name: userID, email: userEmail, password: userPW) { code in
+            if 200 <= code && code < 300 {
+                self.mainView.makeToast("사용 가능한 아이디 입니다.")
+                self.checkLoginButtonCondition(condition: true)
+            }
+        }
         print(userID)
         print(userEmail)
         print(userPW)
     }
     
     func loginButtonEvent() {
+        checkLoginButtonCondition(condition: false)
         mainView.signUpButton.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
     }
     
