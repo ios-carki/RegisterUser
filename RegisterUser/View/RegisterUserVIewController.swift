@@ -61,6 +61,8 @@ final class RegisterUserVIewController: UIViewController {
             if 200 <= code && code < 300 {
                 self.mainView.makeToast("사용 가능한 아이디 입니다.")
                 self.checkLoginButtonCondition(condition: true)
+            } else {
+                self.mainView.makeToast("올바르지 않은 회원가입 속성입니다.\n(비밀번호는 최소 8글자 이상이여야 합니다)")
             }
         }
         print(userID)
