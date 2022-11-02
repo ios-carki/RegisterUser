@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Kingfisher
+
 final class LoginViewController: UIViewController {
     
     let mainView = LoginView()
@@ -26,7 +28,13 @@ final class LoginViewController: UIViewController {
     
     func displayUserData() {
         print("프로파일 메서드 실행")
-        modelView.profile()
+        modelView.profile { userPhotoURL, userEmail, userName in
+            
+            self.mainView.nickNameLable.text = userName
+            self.mainView.idLable.text = userEmail
+            self.mainView.profileImage.kf.setImage(with: URL(string: userPhotoURL)!)
+        }
+        
         
     }
     
@@ -34,7 +42,7 @@ final class LoginViewController: UIViewController {
         
         let logoutButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(logoutButtonCliked))
         
-        self.title = "프로필 뷰 입니다."
+        self.title = "프로필"
         navigationItem.rightBarButtonItem = logoutButton
         navigationItem.rightBarButtonItem?.tintColor = .black
         

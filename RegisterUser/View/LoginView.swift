@@ -21,6 +21,8 @@ class LoginView: BaseView {
         let view = UILabel()
         view.text = "닉네임"
         view.backgroundColor = .brown
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 1
         return view
     }()
     

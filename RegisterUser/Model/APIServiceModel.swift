@@ -27,17 +27,6 @@ struct User: Codable {
 
 class APIServiceModel {
     
-//    func signup(name: String, email: String, password: String) {
-//        let api = SeSACAPI.signup(userName: "testCarki", email: "testCarki@gmial.com", password: "12341234")
-//
-//        AF.request(api.url, method: .post, parameters: api.parameters, headers: api.headers).responseString { response in
-//
-//            print(response)
-//            print(response.response?.statusCode)
-//
-//        }
-//    }
-    
     func signup(name: String, email: String, password: String) {
         let api = SeSACAPI.signup(userName: name, email: email, password: password)
         
@@ -69,7 +58,7 @@ class APIServiceModel {
     }
     
     //로그인 후 처리 메서드
-    func profile() {
+    func profile(completionHandler: @escaping (String, String, String) -> Void) {
         let api = SeSACAPI.profile
         
         //로그인 후 받는 토큰 제이슨 데이터 디코딩
@@ -79,10 +68,7 @@ class APIServiceModel {
                 
             case .success(let data):
                 print(data)
-                
-                print("닉네임: ", data.user.username)
-                print("아이디: ", data.user.email)
-                
+                completionHandler(data.user.photo, data.user.email, data.user.username)
             case .failure(_):
                 print(response.response?.statusCode)
             }
