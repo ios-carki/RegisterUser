@@ -13,6 +13,17 @@
 		C3E9A8D32912466800679928 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E9A8D12912466800679928 /* Main.storyboard */; };
 		C3E9A8D52912466900679928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3E9A8D42912466900679928 /* Assets.xcassets */; };
 		C3E9A8D82912466900679928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E9A8D62912466900679928 /* LaunchScreen.storyboard */; };
+		C3E9A8E1291246CE00679928 /* RegisterUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9A8E0291246CE00679928 /* RegisterUserView.swift */; };
+		C3E9A8E3291246D800679928 /* RegisterUserVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9A8E2291246D800679928 /* RegisterUserVIewController.swift */; };
+		C3E9A8E5291246EB00679928 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9A8E4291246EB00679928 /* LoginView.swift */; };
+		C3E9A8E7291246F500679928 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9A8E6291246F500679928 /* LoginViewController.swift */; };
+		C3E9A8E9291246FB00679928 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9A8E8291246FB00679928 /* BaseView.swift */; };
+		C3E9A8EC2912483500679928 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C3E9A8EB2912483500679928 /* SnapKit */; };
+		C3E9A8EF29124BB400679928 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3E9A8EE29124BB400679928 /* Alamofire */; };
+		C3E9A8F229124BDD00679928 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9A8F129124BDD00679928 /* APIService.swift */; };
+		C3E9A8F429124CE500679928 /* APIServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9A8F329124CE500679928 /* APIServiceModel.swift */; };
+		C3E9A8F72912713200679928 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9A8F62912713200679928 /* RegisterViewModel.swift */; };
+		C3E9A8FA2912714100679928 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9A8F92912714100679928 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,15 @@
 		C3E9A8D42912466900679928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3E9A8D72912466900679928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3E9A8D92912466900679928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3E9A8E0291246CE00679928 /* RegisterUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserView.swift; sourceTree = "<group>"; };
+		C3E9A8E2291246D800679928 /* RegisterUserVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserVIewController.swift; sourceTree = "<group>"; };
+		C3E9A8E4291246EB00679928 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C3E9A8E6291246F500679928 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C3E9A8E8291246FB00679928 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		C3E9A8F129124BDD00679928 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		C3E9A8F329124CE500679928 /* APIServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceModel.swift; sourceTree = "<group>"; };
+		C3E9A8F62912713200679928 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		C3E9A8F92912714100679928 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E9A8EC2912483500679928 /* SnapKit in Frameworks */,
+				C3E9A8EF29124BB400679928 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +78,10 @@
 		C3E9A8CA2912466800679928 /* RegisterUser */ = {
 			isa = PBXGroup;
 			children = (
+				C3E9A8F82912713900679928 /* Utility */,
+				C3E9A8F52912711500679928 /* ViewModel */,
+				C3E9A8F029124BCC00679928 /* Model */,
+				C3E9A8DF2912467100679928 /* View */,
 				C3E9A8CB2912466800679928 /* AppDelegate.swift */,
 				C3E9A8CD2912466800679928 /* SceneDelegate.swift */,
 				C3E9A8CF2912466800679928 /* ViewController.swift */,
@@ -65,6 +91,43 @@
 				C3E9A8D92912466900679928 /* Info.plist */,
 			);
 			path = RegisterUser;
+			sourceTree = "<group>";
+		};
+		C3E9A8DF2912467100679928 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3E9A8E0291246CE00679928 /* RegisterUserView.swift */,
+				C3E9A8E2291246D800679928 /* RegisterUserVIewController.swift */,
+				C3E9A8E4291246EB00679928 /* LoginView.swift */,
+				C3E9A8E6291246F500679928 /* LoginViewController.swift */,
+				C3E9A8E8291246FB00679928 /* BaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C3E9A8F029124BCC00679928 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3E9A8F129124BDD00679928 /* APIService.swift */,
+				C3E9A8F329124CE500679928 /* APIServiceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3E9A8F52912711500679928 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C3E9A8F62912713200679928 /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C3E9A8F82912713900679928 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C3E9A8F92912714100679928 /* Observable.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +146,10 @@
 			dependencies = (
 			);
 			name = RegisterUser;
+			packageProductDependencies = (
+				C3E9A8EB2912483500679928 /* SnapKit */,
+				C3E9A8EE29124BB400679928 /* Alamofire */,
+			);
 			productName = RegisterUser;
 			productReference = C3E9A8C82912466800679928 /* RegisterUser.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +178,10 @@
 				Base,
 			);
 			mainGroup = C3E9A8BF2912466800679928;
+			packageReferences = (
+				C3E9A8EA2912483500679928 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C3E9A8ED29124BB400679928 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C3E9A8C92912466800679928 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +209,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E9A8E7291246F500679928 /* LoginViewController.swift in Sources */,
+				C3E9A8E5291246EB00679928 /* LoginView.swift in Sources */,
+				C3E9A8E1291246CE00679928 /* RegisterUserView.swift in Sources */,
 				C3E9A8D02912466800679928 /* ViewController.swift in Sources */,
+				C3E9A8FA2912714100679928 /* Observable.swift in Sources */,
+				C3E9A8F72912713200679928 /* RegisterViewModel.swift in Sources */,
 				C3E9A8CC2912466800679928 /* AppDelegate.swift in Sources */,
+				C3E9A8E3291246D800679928 /* RegisterUserVIewController.swift in Sources */,
 				C3E9A8CE2912466800679928 /* SceneDelegate.swift in Sources */,
+				C3E9A8F229124BDD00679928 /* APIService.swift in Sources */,
+				C3E9A8F429124CE500679928 /* APIServiceModel.swift in Sources */,
+				C3E9A8E9291246FB00679928 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +438,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3E9A8EA2912483500679928 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C3E9A8ED29124BB400679928 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3E9A8EB2912483500679928 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3E9A8EA2912483500679928 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		C3E9A8EE29124BB400679928 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3E9A8ED29124BB400679928 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3E9A8C02912466800679928 /* Project object */;
 }
